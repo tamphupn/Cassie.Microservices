@@ -37,7 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService", "src\Servic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{53E1C712-62B0-4082-BFA7-97B65B84C14B}"
 	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
+		src\docker-compose.override.yml = src\docker-compose.override.yml
+		src\docker-compose.yml = src\docker-compose.yml
 	EndProjectSection
 EndProject
 Global
