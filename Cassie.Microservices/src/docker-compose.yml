@@ -6,7 +6,7 @@ services:
     image: mcr.microsoft.com/azure-sql-edge:latest
   
   productdb:
-    image: mysql:8.0.29
+    image: mysql:8.0.31
 
   customerdb:
     image: postgres:alpine3.16
@@ -16,6 +16,7 @@ services:
 
   inventorydb:
     image: mongo
+
   hangfiredb:
     image: mongo
 
@@ -37,9 +38,6 @@ services:
 
   sqlserverdb:
     image: mcr.microsoft.com/azure-sql-edge:latest
-  
-  mysqldb:
-    image: mysql:8.0.29
 
 #network section
 networks:
