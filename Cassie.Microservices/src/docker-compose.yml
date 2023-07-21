@@ -16,14 +16,24 @@ services:
 
   inventorydb:
     image: mongo
+  hangfiredb:
+    image: mongo
 
   #infrastructure section
   rabbitmq:
     image: rabbitmq:3-management-alpine
 
   pgadmin:
-    image:
+    image: dpage/pgadmin4
+  
+  portainer:
+    image: portainer/portainer-ce
 
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.7
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.7
 
   sqlserverdb:
     image: mcr.microsoft.com/mssql/server:2019-latest
@@ -43,3 +53,19 @@ volumes:
     name: sqlserver_data
   mysql_data:
     name: mysql_data
+  postgres_data:
+    name: postgres_data
+  portainer_data:
+    name: portainer_data
+  elasticsearch_data:
+    name: elasticsearch_data
+  jaeger_data:
+    name: jaeger_data
+  mongo_data:
+    name: mongo_data
+  hangfire_mongo_data:
+    name: hangfire_mongo_data
+  pgadmin_data:
+    name: pgadmin_data
+  rabbitmq_data:
+    name: rabbitmq_data
