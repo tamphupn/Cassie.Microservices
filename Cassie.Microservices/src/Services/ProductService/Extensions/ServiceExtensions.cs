@@ -10,14 +10,16 @@ namespace ProductService.Extensions
 		public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddControllers();
-			services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
-			services.AddEndpointsApiExplorer();
+            services.AddEndpointsApiExplorer();
+            services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 			services.AddSwaggerGen();
 			services.AddProductDbContext(configuration);
+			services.AddBusinessService();
+			services.AddCustomMiddleWare();
 			return services;
 		}
 
-		public static IServiceCollection AddProductDbContext(this IServiceCollection services, IConfiguration configuration)
+		private static IServiceCollection AddProductDbContext(this IServiceCollection services, IConfiguration configuration)
 		{
 			var connectionString = configuration.GetConnectionString("DefaultConnectionString");
 			var builder = new MySqlConnectionStringBuilder(connectionString);
@@ -29,6 +31,16 @@ namespace ProductService.Extensions
 			}));
 
 			return services;
+		}
+
+		private static void AddBusinessService(this IServiceCollection services)
+		{
+
+		}
+
+		private static void AddCustomMiddleWare(this IServiceCollection services)
+		{
+
 		}
 	}
 }

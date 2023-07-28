@@ -1,5 +1,4 @@
-﻿using System;
-namespace Cassie.Contracts.Domains.Interfaces
+﻿namespace Cassie.Contracts.Domains.Interfaces
 {
 	public interface IUserTracking
 	{
