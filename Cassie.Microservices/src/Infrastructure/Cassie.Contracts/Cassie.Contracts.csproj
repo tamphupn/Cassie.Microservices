@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <Folder Include="Domains\Interfaces\" />
+    <Folder Include="Domains\Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Domains\Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />
+  </ItemGroup>
 </Project>

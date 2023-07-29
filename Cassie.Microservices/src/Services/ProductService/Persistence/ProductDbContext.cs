@@ -10,6 +10,10 @@ namespace ProductService.Persistence
 
 		public ProductDbContext(DbContextOptions<ProductDbContext> options): base (options)
 		{
+			if (options == null)
+			{
+				throw new ArgumentNullException(nameof(options));
+			}
 		}
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

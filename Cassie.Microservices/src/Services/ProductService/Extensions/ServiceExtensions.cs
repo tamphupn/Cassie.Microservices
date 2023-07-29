@@ -26,7 +26,7 @@ namespace ProductService.Extensions
 
 			services.AddDbContext<ProductDbContext>(x => x.UseMySql(builder.ConnectionString, ServerVersion.AutoDetect(builder.ConnectionString), e =>
 			{
-				e.MigrationsAssembly("Product.API");
+				e.MigrationsAssembly("ProductService");
 				e.SchemaBehavior(Pomelo.EntityFrameworkCore.MySql.Infrastructure.MySqlSchemaBehavior.Ignore);
 			}));
 
