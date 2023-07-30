@@ -1,6 +1,6 @@
 ﻿using Cassie.Contracts.Domains.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using ProductService.Entities;
+using ProductService.Domain.Entities;
 
 namespace ProductService.Persistence
 {

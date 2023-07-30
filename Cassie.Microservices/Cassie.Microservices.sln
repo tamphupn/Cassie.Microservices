@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.Shared", "src\Infras
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.SharedInfrastructure", "src\Infrastructure\Cassie.SharedInfrastructure\Cassie.SharedInfrastructure.csproj", "{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.SharedInfrastructureTest", "tests\Cassie.SharedInfrastructureTest\Cassie.SharedInfrastructureTest.csproj", "{51AA8E4B-DFCA-4BC8-A1C5-1923D3FF7A60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51AA8E4B-DFCA-4BC8-A1C5-1923D3FF7A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51AA8E4B-DFCA-4BC8-A1C5-1923D3FF7A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51AA8E4B-DFCA-4BC8-A1C5-1923D3FF7A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51AA8E4B-DFCA-4BC8-A1C5-1923D3FF7A60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +126,7 @@ Global
 		{D0D68D1D-430F-4CAE-A936-DA6B3659BAC2} = {9EA604B8-F590-4C13-BB54-C5E944460528}
 		{23542701-6974-4742-B5A3-D46A87B86F88} = {D34B3F46-1E76-4B50-91EC-AAAEE5822927}
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A} = {D34B3F46-1E76-4B50-91EC-AAAEE5822927}
+		{51AA8E4B-DFCA-4BC8-A1C5-1923D3FF7A60} = {7F23AA63-8643-4FB1-8DE2-D86DE87FC7E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F15D19D-B8E3-475E-B107-459E7D3A258E}

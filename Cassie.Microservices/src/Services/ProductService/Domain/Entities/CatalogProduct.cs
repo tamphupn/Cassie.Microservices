@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Cassie.Contracts.Domains;
 
-namespace ProductService.Entities
+namespace ProductService.Domain.Entities
 {
 	public class CatalogProduct: EntityBase<long>
 	{

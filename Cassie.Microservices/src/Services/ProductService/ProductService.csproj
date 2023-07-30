@@ -23,15 +23,24 @@
     <ProjectReference Include="..\..\Infrastructure\Cassie.Contracts\Cassie.Contracts.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Cassie.SharedInfrastructure\Cassie.SharedInfrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Extensions\" />
-    <None Remove="Entities\" />
     <None Remove="Persistence\" />
+    <None Remove="Domain\" />
+    <None Remove="Domain\Entities\" />
+    <None Remove="Domain\Repositories\" />
+    <None Remove="Domain\Repositories\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
-    <Folder Include="Entities\" />
     <Folder Include="Persistence\" />
+    <Folder Include="Domain\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Repositories\" />
+    <Folder Include="Domain\Repositories\Interfaces\" />
   </ItemGroup>
 </Project>
