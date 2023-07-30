@@ -8,7 +8,7 @@ namespace ProductService.Persistence
 	{
 		public DbSet<CatalogProduct> CatalogProducts { get; set; }
 
-		public ProductDbContext(DbContextOptions<ProductDbContext> options): base (options)
+		public ProductDbContext(DbContextOptions<ProductDbContext> options = default!): base (options)
 		{
 			if (options == null)
 			{
