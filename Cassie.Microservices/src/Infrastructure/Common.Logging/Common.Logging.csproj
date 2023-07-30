@@ -12,6 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cassie.Shared\Cassie.Shared.csproj" />
+    <ProjectReference Include="..\Cassie.SharedInfrastructure\Cassie.SharedInfrastructure.csproj" />
   </ItemGroup>
 </Project>

@@ -14,6 +14,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,7 +37,7 @@
     <None Remove="Persistence\Repositories\" />
     <None Remove="Domain\IRepositories\" />
     <None Remove="Application\" />
-    <None Remove="Application\Dtos\" />
+    <None Remove="Application\CatalogProducts\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
@@ -45,6 +47,6 @@
     <Folder Include="Persistence\Repositories\" />
     <Folder Include="Domain\IRepositories\" />
     <Folder Include="Application\" />
-    <Folder Include="Application\Dtos\" />
+    <Folder Include="Application\CatalogProducts\" />
   </ItemGroup>
 </Project>

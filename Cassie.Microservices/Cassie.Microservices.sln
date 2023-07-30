@@ -41,8 +41,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		src\docker-compose.yml = src\docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.Shared", "src\Infrastructure\Cassie.Shared\Cassie.Shared.csproj", "{23542701-6974-4742-B5A3-D46A87B86F88}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.SharedInfrastructure", "src\Infrastructure\Cassie.SharedInfrastructure\Cassie.SharedInfrastructure.csproj", "{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{94485C7C-0D5D-485F-A814-4CBD4B828ECF}"
@@ -50,6 +48,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8B3C75FE-D2FC-4708-AC84-51B64959B0BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.SharedInfrastructureTests", "tests\src\Infrastructure\Cassie.SharedInfrastructureTests\Cassie.SharedInfrastructureTests.csproj", "{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.SharedApplication", "src\Infrastructure\Cassie.SharedApplication\Cassie.SharedApplication.csproj", "{0F038543-D4BC-4E4D-B19C-4AC33ED6E689}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,10 +97,6 @@ Global
 		{D0D68D1D-430F-4CAE-A936-DA6B3659BAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0D68D1D-430F-4CAE-A936-DA6B3659BAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0D68D1D-430F-4CAE-A936-DA6B3659BAC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23542701-6974-4742-B5A3-D46A87B86F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23542701-6974-4742-B5A3-D46A87B86F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23542701-6974-4742-B5A3-D46A87B86F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23542701-6974-4742-B5A3-D46A87B86F88}.Release|Any CPU.Build.0 = Release|Any CPU
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -109,6 +105,10 @@ Global
 		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F038543-D4BC-4E4D-B19C-4AC33ED6E689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F038543-D4BC-4E4D-B19C-4AC33ED6E689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F038543-D4BC-4E4D-B19C-4AC33ED6E689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F038543-D4BC-4E4D-B19C-4AC33ED6E689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,11 +128,11 @@ Global
 		{3975350F-A8B9-4D1B-B525-5083B3108274} = {9EA604B8-F590-4C13-BB54-C5E944460528}
 		{B4394FB1-9056-4852-9BB6-2A0193AD020F} = {9EA604B8-F590-4C13-BB54-C5E944460528}
 		{D0D68D1D-430F-4CAE-A936-DA6B3659BAC2} = {9EA604B8-F590-4C13-BB54-C5E944460528}
-		{23542701-6974-4742-B5A3-D46A87B86F88} = {D34B3F46-1E76-4B50-91EC-AAAEE5822927}
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A} = {D34B3F46-1E76-4B50-91EC-AAAEE5822927}
 		{94485C7C-0D5D-485F-A814-4CBD4B828ECF} = {7F23AA63-8643-4FB1-8DE2-D86DE87FC7E3}
 		{8B3C75FE-D2FC-4708-AC84-51B64959B0BD} = {94485C7C-0D5D-485F-A814-4CBD4B828ECF}
 		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB} = {8B3C75FE-D2FC-4708-AC84-51B64959B0BD}
+		{0F038543-D4BC-4E4D-B19C-4AC33ED6E689} = {D34B3F46-1E76-4B50-91EC-AAAEE5822927}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F15D19D-B8E3-475E-B107-459E7D3A258E}

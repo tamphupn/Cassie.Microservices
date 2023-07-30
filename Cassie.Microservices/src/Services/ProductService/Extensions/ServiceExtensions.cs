@@ -19,6 +19,7 @@ namespace ProductService.Extensions
 			services.AddProductDbContext(configuration);
 			services.AddBusinessService();
             services.AddLogging();
+            services.AddAutoMapper(typeof(Program));
             services.AddCustomMiddleWare();
 			return services;
 		}
@@ -45,7 +46,6 @@ namespace ProductService.Extensions
 
 		private static void AddCustomMiddleWare(this IServiceCollection services)
 		{
-
 		}
 	}
 }

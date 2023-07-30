@@ -9,10 +9,12 @@
   <ItemGroup>
     <None Remove="Domains\" />
     <None Remove="Domains\Repositories\" />
+    <None Remove="Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domains\" />
     <Folder Include="Domains\Repositories\" />
+    <Folder Include="Constants\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cassie.Contracts\Cassie.Contracts.csproj" />

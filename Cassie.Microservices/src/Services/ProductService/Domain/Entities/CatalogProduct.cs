@@ -22,5 +22,7 @@ namespace ProductService.Domain.Entities
 
         [Column(TypeName = "decimal(12,2)")]
         public decimal Price { get; set; }
+
+        public int StockQuantity { get; set; }
     }
 }

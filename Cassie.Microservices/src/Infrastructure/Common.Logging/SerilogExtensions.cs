@@ -1,4 +1,4 @@
-﻿using Cassie.Shared.Constants;
+﻿using Cassie.SharedInfrastructure.Constants;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 

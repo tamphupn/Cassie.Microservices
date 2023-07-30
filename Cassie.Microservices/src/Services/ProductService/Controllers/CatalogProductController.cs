@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ProductService.Application.Dtos;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using ProductService.Application.CatalogProducts.Dtos;
+using ProductService.Domain.Entities;
 using ProductService.Domain.IRepositories;
 
 namespace ProductService.Controllers
@@ -9,10 +11,13 @@ namespace ProductService.Controllers
     public class CatalogProductController: ControllerBase
 	{
 		private readonly ICatalogProductRepository _catalogProductRepository;
+        private readonly IMapper _mapper;
 
-        public CatalogProductController(ICatalogProductRepository catalogProductRepository)
+        public CatalogProductController(ICatalogProductRepository catalogProductRepository
+            , IMapper mapper)
 		{
             _catalogProductRepository = catalogProductRepository ?? throw new ArgumentNullException(nameof(catalogProductRepository));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
@@ -20,7 +25,8 @@ namespace ProductService.Controllers
         {
             var result = await _catalogProductRepository.GetAsync(id);
             if (result == null) return NotFound();
-            return Ok(result);
+            var mapped = _mapper.Map<CatalogProduct, CatalogProductDto>(result);
+            return Ok(mapped);
         }
 
         [HttpPost]
@@ -33,6 +39,13 @@ namespace ProductService.Controllers
 
         [HttpDelete]
         public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var isSuccess = await _catalogProductRepository.DeleteAsync(id);
+            return isSuccess ? Ok() : NotFound();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody]CatalogProductCreateDto model)
         {
             var isSuccess = await _catalogProductRepository.DeleteAsync(id);
             return isSuccess ? Ok() : NotFound();
