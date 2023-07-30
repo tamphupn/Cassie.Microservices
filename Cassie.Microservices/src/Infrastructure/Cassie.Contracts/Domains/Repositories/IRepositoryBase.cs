@@ -23,6 +23,8 @@ namespace Cassie.Contracts.Domains.Repositories
         Task<IDbContextTransaction> BeginTransactionAsync();
         Task EndTransactionAsync();
         Task RollbackTransactionAsync();
+
+        Task<bool> DeleteAsync(K id);
     }
 
     public interface IRepositoryBase<T, K, TContext> : IRepositoryBase<T, K>

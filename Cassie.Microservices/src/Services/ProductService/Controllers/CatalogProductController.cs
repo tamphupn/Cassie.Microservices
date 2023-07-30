@@ -31,12 +31,11 @@ namespace ProductService.Controllers
             return BadRequest();
         }
 
-        //[HttpDelete]
-        //public async Task<IActionResult> DeleteAsync(int id)
-        //{
-        //    var result = await _catalogProductRepository.DeleteAsync(id);
-        //    if (result == null) return NotFound();
-        //    return Ok(result);
-        //}
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var isSuccess = await _catalogProductRepository.DeleteAsync(id);
+            return isSuccess ? Ok() : NotFound();
+        }
     }
 }

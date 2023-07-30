@@ -53,6 +53,17 @@ namespace Cassie.SharedInfrastructure.Domains.Repositories
             await SaveChangesAsync();
         }
 
+        public async Task<bool> DeleteAsync(K id)
+        {
+            var entity = Get(id, true);
+            if (entity != null)
+            {
+                await DeleteAsync(entity);
+                return true;
+            }
+            return false;
+        }
+
         public void DeleteList(IEnumerable<T> entities) => _dbContext.Set<T>().RemoveRange(entities);
 
         public async Task DeleteListAsync(IEnumerable<T> entities)
