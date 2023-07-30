@@ -49,7 +49,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{94485C7C-0D5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8B3C75FE-D2FC-4708-AC84-51B64959B0BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.SharedInfrastructureTests", "tests\src\Infrastructure\Cassie.SharedInfrastructureTests\Cassie.SharedInfrastructureTests.csproj", "{6168C2E0-CAEE-446E-8907-AFD2BFEB7A33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassie.SharedInfrastructureTests", "tests\src\Infrastructure\Cassie.SharedInfrastructureTests\Cassie.SharedInfrastructureTests.csproj", "{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,10 +105,10 @@ Global
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6168C2E0-CAEE-446E-8907-AFD2BFEB7A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6168C2E0-CAEE-446E-8907-AFD2BFEB7A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6168C2E0-CAEE-446E-8907-AFD2BFEB7A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6168C2E0-CAEE-446E-8907-AFD2BFEB7A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -132,7 +132,7 @@ Global
 		{53EF6B5E-631D-4ED7-89CB-07A2EE5F5B4A} = {D34B3F46-1E76-4B50-91EC-AAAEE5822927}
 		{94485C7C-0D5D-485F-A814-4CBD4B828ECF} = {7F23AA63-8643-4FB1-8DE2-D86DE87FC7E3}
 		{8B3C75FE-D2FC-4708-AC84-51B64959B0BD} = {94485C7C-0D5D-485F-A814-4CBD4B828ECF}
-		{6168C2E0-CAEE-446E-8907-AFD2BFEB7A33} = {8B3C75FE-D2FC-4708-AC84-51B64959B0BD}
+		{6FC37C84-ABC1-49DE-B605-99BC9AC1BAAB} = {8B3C75FE-D2FC-4708-AC84-51B64959B0BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F15D19D-B8E3-475E-B107-459E7D3A258E}

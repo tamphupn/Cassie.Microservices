@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using ProductService.Persistence;
+using Cassie.SharedInfrastructure.Domains;
+using ProductService.Persistence.Repositories;
+using ProductService.Domain.IRepositories;
 
 namespace ProductService.Extensions
 {
@@ -15,7 +18,8 @@ namespace ProductService.Extensions
 			services.AddSwaggerGen();
 			services.AddProductDbContext(configuration);
 			services.AddBusinessService();
-			services.AddCustomMiddleWare();
+            services.AddLogging();
+            services.AddCustomMiddleWare();
 			return services;
 		}
 
@@ -35,8 +39,9 @@ namespace ProductService.Extensions
 
 		private static void AddBusinessService(this IServiceCollection services)
 		{
-
-		}
+			services.AddRepositoryAndUow();
+			services.AddTransient<ICatalogProductRepository, CatalogProductRepository>();
+        }
 
 		private static void AddCustomMiddleWare(this IServiceCollection services)
 		{

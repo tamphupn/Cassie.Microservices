@@ -34,6 +34,8 @@
     <None Remove="Domain\Entities\" />
     <None Remove="Persistence\Repositories\" />
     <None Remove="Domain\IRepositories\" />
+    <None Remove="Application\" />
+    <None Remove="Application\Dtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
@@ -42,5 +44,7 @@
     <Folder Include="Domain\Entities\" />
     <Folder Include="Persistence\Repositories\" />
     <Folder Include="Domain\IRepositories\" />
+    <Folder Include="Application\" />
+    <Folder Include="Application\Dtos\" />
   </ItemGroup>
 </Project>

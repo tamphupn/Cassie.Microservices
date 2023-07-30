@@ -14,6 +14,7 @@ try
 
     // Configure the HTTP request pipeline.
     app.UseInfrastructure(app.Environment);
+    app.MapControllers();
     app.Run();
 }
 catch (Exception ex)

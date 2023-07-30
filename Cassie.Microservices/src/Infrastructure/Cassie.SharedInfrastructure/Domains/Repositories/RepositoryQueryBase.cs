@@ -33,6 +33,12 @@ namespace Cassie.SharedInfrastructure.Domains.Repositories
 
         public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool trackChange = false) =>
             trackChange ? _context.Set<T>().Where(expression) : _context.Set<T>().Where(expression).AsNoTracking();
+
+        public T? Get(K id, bool trackChange = false) =>
+            trackChange ? _context.Set<T>().FirstOrDefault(x => x.Id.Equals(id)) : _context.Set<T>().AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
+
+        public Task<T?> GetAsync(K id, bool trackChange = false, CancellationToken cancellationToken = default) =>
+            trackChange ? _context.Set<T>().FirstOrDefaultAsync(x => x.Id.Equals(id), cancellationToken) : _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(id), cancellationToken);
     }
 }
 
