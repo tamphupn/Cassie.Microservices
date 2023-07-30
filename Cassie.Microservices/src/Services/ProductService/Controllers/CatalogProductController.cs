@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.ComponentModel.DataAnnotations;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ProductService.Application.CatalogProducts.Dtos;
 using ProductService.Domain.Entities;
@@ -45,10 +46,15 @@ namespace ProductService.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateAsync(int id, [FromBody]CatalogProductCreateDto model)
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] CatalogProductUpdateDto model)
         {
-            var isSuccess = await _catalogProductRepository.DeleteAsync(id);
-            return isSuccess ? Ok() : NotFound();
+            var existed = await _catalogProductRepository.GetAsync(id, true);
+            if (existed == null) return NotFound();
+
+            var updatedProduct = _mapper.Map(model, existed);
+            await _catalogProductRepository.UpdateAsync(updatedProduct);
+
+            return Ok(_mapper.Map<CatalogProductDto>(updatedProduct));
         }
     }
 }
