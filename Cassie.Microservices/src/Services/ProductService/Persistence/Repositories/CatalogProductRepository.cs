@@ -1,10 +1,9 @@
 ﻿using Cassie.Contracts.Domains.Repositories;
 using Cassie.SharedInfrastructure.Domains.Repositories;
 using ProductService.Domain.Entities;
-using ProductService.Domain.Repositories.Interfaces;
-using ProductService.Persistence;
+using ProductService.Domain.IRepositories;
 
-namespace ProductService.Domain.Repositories
+namespace ProductService.Persistence.Repositories
 {
 	public class CatalogProductRepository : RepositoryBase<CatalogProduct, long, ProductDbContext>, ICatalogProductRepository
     {

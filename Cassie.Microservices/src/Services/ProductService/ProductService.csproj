@@ -32,15 +32,15 @@
     <None Remove="Persistence\" />
     <None Remove="Domain\" />
     <None Remove="Domain\Entities\" />
-    <None Remove="Domain\Repositories\" />
-    <None Remove="Domain\Repositories\Interfaces\" />
+    <None Remove="Persistence\Repositories\" />
+    <None Remove="Domain\IRepositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Persistence\" />
     <Folder Include="Domain\" />
     <Folder Include="Domain\Entities\" />
-    <Folder Include="Domain\Repositories\" />
-    <Folder Include="Domain\Repositories\Interfaces\" />
+    <Folder Include="Persistence\Repositories\" />
+    <Folder Include="Domain\IRepositories\" />
   </ItemGroup>
 </Project>
