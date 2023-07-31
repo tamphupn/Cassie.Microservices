@@ -1,5 +1,6 @@
 ﻿
 
+using CustomerService.Controllers;
 using CustomerService.Extensions;
 using Serilog;
 
@@ -11,6 +12,7 @@ try
     builder.Services.AddInfrastructure(builder.Configuration);
     var app = builder.Build();
     app.UseInfrastructure(builder.Environment);
+    app.MapCustomerAPIs();
     app.MapControllers();
     app.Run();
 }

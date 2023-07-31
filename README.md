@@ -5,6 +5,10 @@
 - dotnet ef migrations add init_productdb -p src/Services/ProductService
 - dotnet ef database update -p src/Services/ProductService
 
+- dotnet ef migrations add init_productdb -p src/Services/CustomerService
+- dotnet ef database update -p src/Services/CustomerService
+
+
 2. Run build service
 - Product Service: dotnet run --project src/Services/ProductService
 - Customer Service: dotnet run --project src/Services/CustomerService

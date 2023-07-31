@@ -23,6 +23,10 @@
     <None Remove="Domain\IRepositories\" />
     <None Remove="Persistence\Repositories\" />
     <None Remove="Extensions\" />
+    <None Remove="Application\Customers\" />
+    <None Remove="Application\Customers\Dtos\" />
+    <None Remove="Application\Customers\Services\" />
+    <None Remove="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
@@ -32,6 +36,10 @@
     <Folder Include="Domain\IRepositories\" />
     <Folder Include="Persistence\Repositories\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Application\Customers\" />
+    <Folder Include="Application\Customers\Dtos\" />
+    <Folder Include="Application\Customers\Services\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Cassie.Contracts\Cassie.Contracts.csproj">

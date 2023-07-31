@@ -46,6 +46,12 @@ services:
       context: .
       dockerfile: Services/ProductService/Dockerfile
 
+  customer.service:
+    image: ${DOCKER_REGISTRY-}customer-api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/CustomerService/Dockerfile
+
 #network section
 networks:
   default:

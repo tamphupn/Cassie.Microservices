@@ -16,4 +16,3 @@ namespace ProductService.Application.CatalogProducts.Dtos
         public decimal? Price { get; set; }
     }
 }
-
