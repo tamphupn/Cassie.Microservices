@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ProductService.Application.CatalogProducts.Dtos;
 using ProductService.Domain.Entities;

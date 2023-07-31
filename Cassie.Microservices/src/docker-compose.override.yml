@@ -127,3 +127,16 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+
+  #microservices api section
+  product.service:
+    container_name: product.service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - "ConnectionStrings:DefaultConnectionString=Server=productdb;Port=3306;Database=ProductDB;username=root;password=Passw0rd!"
+    depends_on: 
+      - productdb
+    ports:
+      - "6002:80"
+    restart: always

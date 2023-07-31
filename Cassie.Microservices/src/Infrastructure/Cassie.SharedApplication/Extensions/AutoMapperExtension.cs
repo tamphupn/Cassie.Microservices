@@ -16,7 +16,7 @@ namespace Cassie.SharedApplication.Extensions
 			{
 				var selectedProperty = sourceType.GetProperty(property.Name, flags);
 
-                if (selectedProperty == null || (selectedProperty != null && selectedProperty.GetValue(sourceType) == null))
+                if (selectedProperty == null)
 				{
 					expression.ForMember(property.Name, opt => opt.Ignore());
 				}

@@ -39,6 +39,13 @@ services:
   sqlserverdb:
     image: mcr.microsoft.com/azure-sql-edge:latest
 
+  #microservice api section
+  product.service:
+    image: ${DOCKER_REGISTRY-}product-api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/ProductService/Dockerfile
+
 #network section
 networks:
   default:
