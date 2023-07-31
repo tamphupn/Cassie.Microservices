@@ -21,39 +21,39 @@ namespace ProductService.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAsync(int id)
+        public async Task<IResult> GetAsync(int id)
         {
             var result = await _catalogProductRepository.GetAsync(id);
-            if (result == null) return NotFound();
+            if (result == null) return Results.NotFound();
             var mapped = _mapper.Map<CatalogProduct, CatalogProductDto>(result);
-            return Ok(mapped);
+            return Results.Ok(mapped);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromBody]CatalogProductCreateDto model)
+        public async Task<IResult> CreateAsync([FromBody]CatalogProductCreateDto model)
         {
             var newId = await _catalogProductRepository.CreateAsync(model);
-            if (newId > 0) return new CreatedResult(nameof(CreateAsync), newId);
-            return BadRequest();
+            if (newId > 0) return Results.Created(nameof(CreateAsync), newId);
+            return Results.BadRequest();
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteAsync(int id)
+        public async Task<IResult> DeleteAsync(int id)
         {
             var isSuccess = await _catalogProductRepository.DeleteAsync(id);
-            return isSuccess ? Ok() : NotFound();
+            return isSuccess ? Results.Ok() : Results.NotFound();
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateAsync(int id, [FromBody] CatalogProductUpdateDto model)
+        public async Task<IResult> UpdateAsync(int id, [FromBody] CatalogProductUpdateDto model)
         {
             var existed = await _catalogProductRepository.GetAsync(id, true);
-            if (existed == null) return NotFound();
+            if (existed == null) return Results.NotFound();
 
             var updatedProduct = _mapper.Map(model, existed);
             await _catalogProductRepository.UpdateAsync(updatedProduct);
 
-            return Ok(_mapper.Map<CatalogProductDto>(updatedProduct));
+            return Results.Ok(_mapper.Map<CatalogProductDto>(updatedProduct));
         }
     }
 }

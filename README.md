@@ -15,4 +15,11 @@
 4. Knowledge link
 - Auto Mapper
     https://github.com/AutoMapper/AutoMapper
-- 
+- IResult & IActionResult
+    https://stackoverflow.com/questions/74256233/iactionresult-vs-iresult-asp-net-core
+- MySQL
+    https://geshan.com.np/blog/2022/02/mysql-docker-compose/
+
+5. Urls
+- Product Service
+    - http://localhost:6002/swagger/index.html
