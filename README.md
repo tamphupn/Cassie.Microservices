@@ -17,6 +17,9 @@
 - cd src && docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans
 - cd src && docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans --build
 
+- rebuild one service
+    - docker compose up -d --no-deps --build customer.service
+    
 4. Knowledge link
 - Auto Mapper
     https://github.com/AutoMapper/AutoMapper
@@ -32,3 +35,13 @@
 - Customer Service
     - Development: http://localhost:5003/swagger/index.html
     - Dockerize: http://localhost:6002/swagger/index.html
+
+6. Basic commands
+- Redis 
+    - Ping
+    - Set <key> <value>
+    - Get <key>
+    - INCR <key_integer>
+    - LPUSH <key> [element1, element2]
+    - LINDEX <key> <index>
+    - LRANGE <key> <from: ex 0> <to: ex 2 or -1 for all>
