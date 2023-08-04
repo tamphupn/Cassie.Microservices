@@ -12,6 +12,7 @@
 2. Run build service
 - Product Service: dotnet run --project src/Services/ProductService
 - Customer Service: dotnet run --project src/Services/CustomerService
+- Basket Service: dotnet run --project src/Services/BasketService/
 
 3. Using docker-compose:
 - cd src && docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans
@@ -38,6 +39,8 @@
 - Customer Service
     - Development: http://localhost:5003/swagger/index.html
     - Dockerize: http://localhost:6002/swagger/index.html
+- Basket Service
+    - Development: dotnet run --project src/Services/BasketService/
 
 6. Basic commands
 - Redis 
