@@ -9,10 +9,12 @@
   <ItemGroup>
     <Folder Include="Domains\Interfaces\" />
     <Folder Include="Domains\Repositories\" />
+    <Folder Include="Applications\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Domains\Repositories\" />
+    <None Remove="Applications\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />

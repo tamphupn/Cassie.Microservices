@@ -19,7 +19,7 @@
 
 - rebuild one service
     - docker compose up -d --no-deps --build customer.service
-    
+    - docker compose up -d --no-deps --build product.service
 4. Knowledge link
 - Auto Mapper
     https://github.com/AutoMapper/AutoMapper
@@ -27,6 +27,9 @@
     https://stackoverflow.com/questions/74256233/iactionresult-vs-iresult-asp-net-core
 - MySQL
     https://geshan.com.np/blog/2022/02/mysql-docker-compose/
+- Minimal API
+    https://code-maze.com/dotnet-minimal-api/
+    https://binaryintellect.net/articles/f3dcbb45-fa8b-4e12-b284-f0cd2e5b2dcf.aspx
 
 5. Urls
 - Product Service
