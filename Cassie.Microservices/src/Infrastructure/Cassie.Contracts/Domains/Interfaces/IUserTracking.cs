@@ -6,4 +6,3 @@
 		string ModifiedBy { get; set; }
 	}
 }
-
