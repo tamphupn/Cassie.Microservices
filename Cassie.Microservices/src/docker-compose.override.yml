@@ -105,8 +105,6 @@ services:
       - xpack.security.enabled=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - discovery.type=single-node
-#      - ELASTIC_USERNAME=elastic #default username
-      - ELASTIC_PASSWORD=admin
     ports:
       - "9200:9200"
     volumes:
