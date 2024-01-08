@@ -1,4 +1,5 @@
-﻿using BasketService.Domain.Entities;
+﻿using BasketService.Domain.Constants;
+using BasketService.Domain.Entities;
 using BasketService.Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
@@ -14,7 +15,7 @@ namespace BasketService.Controllers
 
         public BasketsController(IBasketRepository basketRepository)
         {
-            _basketRepository = basketRepository;
+            _basketRepository = basketRepository ?? throw new ArgumentNullException(nameof(basketRepository));
         }
 
         [HttpGet]
@@ -29,8 +30,8 @@ namespace BasketService.Controllers
         public async Task<ActionResult<Cart>> UpdateBasket([FromBody] Cart cart)
         {
             var options = new DistributedCacheEntryOptions()
-                .SetAbsoluteExpiration(DateTime.UtcNow.AddHours(10))
-                .SetSlidingExpiration(TimeSpan.FromMinutes(10));
+                .SetAbsoluteExpiration(DateTime.UtcNow.AddHours(BasketConstants.BASKET_CACHE_TIME))
+                .SetSlidingExpiration(TimeSpan.FromMinutes(BasketConstants.BASKET_CACHE_TIME));
 
             var result = await _basketRepository.UpdateBasket(cart, options);
             return Ok(result);
