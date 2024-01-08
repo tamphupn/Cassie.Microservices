@@ -41,6 +41,7 @@
     - Dockerize: http://localhost:6002/swagger/index.html
 - Basket Service
     - Development: dotnet run --project src/Services/BasketService/
+    - Dockerize: http://localhost:6002/swagger/index.html
 
 6. Basic commands
 - Redis 
