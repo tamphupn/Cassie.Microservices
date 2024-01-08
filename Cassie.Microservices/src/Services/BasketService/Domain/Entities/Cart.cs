@@ -1,8 +1,7 @@
-﻿using System;
-namespace BasketService.Domain.Entities
+﻿namespace BasketService.Domain.Entities
 {
-	public class Cart
-	{
+    public class Cart
+    {
         public string Username { get; set; }
 
         public string EmailAddress { get; set; }

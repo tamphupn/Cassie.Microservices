@@ -1,19 +1,18 @@
-﻿using System;
-using BasketService.Domain.Entities;
+﻿using BasketService.Domain.Entities;
 using BasketService.Domain.IRepositories;
 using Cassie.Contracts.Applications;
 using Microsoft.Extensions.Caching.Distributed;
 
 namespace BasketService.Persistence.Repositories
 {
-	public class BasketRepository: IBasketRepository
+    public class BasketRepository : IBasketRepository
     {
         private readonly IDistributedCache _cache;
         private readonly ILogger _logger;
         private readonly ICassieSerializeService _serializeService;
 
         public BasketRepository(IDistributedCache cache, ILogger<BasketRepository> logger, ICassieSerializeService serializeService)
-		{
+        {
             _cache = cache ?? throw new ArgumentNullException(nameof(cache));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _serializeService = serializeService ?? throw new ArgumentNullException(nameof(serializeService));

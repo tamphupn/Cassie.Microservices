@@ -1,5 +1,4 @@
-﻿using System;
-using BasketService.Domain.Entities;
+﻿using BasketService.Domain.Entities;
 using Microsoft.Extensions.Caching.Distributed;
 
 namespace BasketService.Domain.IRepositories

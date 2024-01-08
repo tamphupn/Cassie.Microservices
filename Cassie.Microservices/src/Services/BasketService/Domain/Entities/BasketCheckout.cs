@@ -1,10 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BasketService.Domain.Entities
 {
-	public class BasketCheckout
-	{
+    public class BasketCheckout
+    {
         [Required]
         public string UserName { get; set; } = default!;
         public decimal TotalPrice { get; set; } = default!;
